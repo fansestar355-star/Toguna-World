@@ -56,7 +56,6 @@
         transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
       }
 
-      /* Classe pour cacher immédiatement l'overlay sans animation au retour */
       #story-overlay.hidden-instantly {
         display: none !important;
       }
@@ -281,7 +280,6 @@
     <script>
       const overlay = document.getElementById("story-overlay");
 
-      // Vérification au chargement : si déjà visité, on cache l'overlay direct
       if (sessionStorage.getItem("visited")) {
         overlay.classList.add("hidden-instantly");
       }
@@ -297,43 +295,43 @@
           img: "img_pilier_2.png",
           title: "Gardien et au Serpent",
           desc: "Le protecteur de la terre.",
-          url: "https://5qjqmr.csb.app/",
+          url: "https://fansestar355-star.github.io/gardienetserpent/",
         },
         {
           img: "img_pilier_3.png",
           title: "la Femme au Mortier",
           desc: "Pour préparer la nourriture.",
-          url: "https://45d7ng.csb.app/",
+          url: "https://fansestar355-star.github.io/mortier2/",
         },
         {
           img: "img_pilier_4.png",
           title: "l'Échelle de l'Ascension",
           desc: "Le respect pour les anciens.",
-          url: "https://tr3lh3.csb.app/",
+          url: "https://fansestar355-star.github.io/echelle_de_Ascension/",
         },
         {
           img: "img_pilier_5.png",
           title: "l'Ancêtre Primordial",
           desc: "La force de la famille.",
-          url: "https://x42f22.csb.app/",
+          url: "https://fansestar355-star.github.io/ancetre_Primordial/",
         },
         {
           img: "img_pilier_6.png",
-          title: "l'Esprit Stylisé ",
+          title: "l'Esprit Stylisé",
           desc: "La force invisible.",
-          url: "https://d63grc.csb.app/",
+          url: "https://fansestar355-star.github.io/Signes_geometriques/",
         },
         {
           img: "img_pilier_7.png",
-          title: "Signes Géométriques ",
+          title: "Signes Géométriques",
           desc: "Les secrets de l'univers.",
-          url: "https://ryhfth.csb.app/",
+          url: "https://fansestar355-star.github.io/Signes_geometriques/",
         },
         {
           img: "img_pilier_8.png",
-          title: "Le Duo",
+          title: "Le Duo (Dualité)",
           desc: "Vivre ensemble en paix.",
-          url: "https://8jp489.csb.app/",
+          url: "https://fansestar355-star.github.io/dualite/",
         },
       ];
 
@@ -341,7 +339,6 @@
       const imgEl = document.getElementById("main-pillar");
 
       function launch() {
-        // On enregistre le passage de l'utilisateur
         sessionStorage.setItem("visited", "true");
         overlay.style.transform = "translateY(-100%)";
       }
@@ -365,7 +362,6 @@
         setTimeout(() => (window.location.href = pillars[index].url), 500);
       }
 
-      // --- ÉTOILES ---
       const canvas = document.getElementById("stars-canvas");
       const ctx = canvas.getContext("2d");
       canvas.width = window.innerWidth;
